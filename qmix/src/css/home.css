@@ -31,7 +31,6 @@ div.black {
     height: 100px;
     position: fixed;
     z-index: 1;
-    -webkit-transition: all 0.3s ease-in-out;
 }
 
 .titlebar:hover {
@@ -51,22 +50,8 @@ div.black {
 
 div.container {
     margin: auto;
-    width: 70%;
+    width: 90%;
     padding-top: 100px;
-}
-
-.box:hover {
-    color: wheat;
-}
-
-.social:hover {
-    filter: invert(10%) sepia(6%) saturate(2652%) hue-rotate(321deg) brightness(107%) contrast(92%);
-}
-
-.alpha {
-    background: rgba(255, 255, 255, 0.722);
-    border: solid thin rgba(245, 222, 179, 1);
-    color: wheat;
 }
 
 div.name {
@@ -131,7 +116,7 @@ p.intro {
     }
 }
 
-@media screen and (max-width: 1280px) {
+@media screen and (max-width: 1290px) {
     div.intro {
         left: 10%;
         top: 10vh;
@@ -139,15 +124,20 @@ p.intro {
     img.homeLogo {
         display: none;
     }
-    h1.title {
-        width: 70vw;
+    .resp {
+        font-size: 84px !important;
+        width: 75vw !important;
+        line-height: initial !important;
     }
     p.intro {
         width: 75vw;
         height: 30%
     }
-    #logo {
-        opacity: 1 !important;
+    p.welcome {
+        width: 75vw !important;
+    }
+    .fb_iframe_widget {
+        display: none !important;
     }
 }
 
@@ -186,7 +176,6 @@ div.welcome {
     font-size: 38px;
     font-weight: bold;
     color: black;
-    padding-left: 5%;
 }
 
 div.events {
@@ -221,7 +210,7 @@ p.welcome {
     font-weight: normal;
     font-size: 18px;
     line-height: 25px;
-    width: 70%;
+    width: 720px;
 }
 
 button.instagram {
@@ -264,57 +253,13 @@ button.facebook {
     -webkit-transition: all 0.3s ease-in-out;
 }
 
+button.facebook:hover,
 button.instagram:hover {
     background: #166486;
 }
 
 img.button {
     padding-left: 5px;
-}
-
-h4.card-title {
-    margin-left: auto;
-    margin-right: auto;
-    font-family: Nunito;
-    font-style: normal;
-    font-weight: bold;
-    font-size: 28px;
-    text-align: center;
-    line-height: 25px;
-    width: 70%;
-}
-
-.event-card {
-    box-shadow: 0px 20px 20px rgba(0, 0, 0, 0.1);
-    border-radius: 14px;
-    -webkit-transition: all 0.3s ease-in-out;
-}
-
-.event-card:hover {
-    box-shadow: 0px 20px 20px rgba(0, 0, 0, 0.2);
-}
-
-.event-bg-img {
-    background-size: cover;
-    min-height: 100%;
-    background-position: center;
-    background-color: white;
-}
-
-img.event-img {
-    max-width: 100%;
-    border-radius: 14px;
-}
-
-.event-card-content {
-    padding: 15px;
-}
-
-.event-grid-container {
-    padding-top: 15px;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    grid-gap: 20px;
 }
 
 button {
@@ -387,4 +332,21 @@ div.space {
 
 div.landing {
     height: 50px;
+}
+
+.fb_iframe_widget {
+    /* float: left; */
+    display: inline-block;
+    margin: 88px 0px 0px 60px;
+}
+
+div.start {
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+
+.resp {
+    width: 730px
 }

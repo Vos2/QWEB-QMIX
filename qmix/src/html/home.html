@@ -19,80 +19,67 @@
     <!--You can go to Google Fonts and insert your own font here-->
     <title>QMIX &#8226; Home</title>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <script>
-        $(window).scroll(function() {
-            var s = $(window).scrollTop(),
-                d = $(document).height(),
-                c = $(window).height();
-            scrollPercent = (s / (d - c)) * 100;
-            var position = scrollPercent / 50;
-            console.log(position)
-            $("#titlebar").attr('style', "background: rgba(0, 0, 0, " + position + ");");
-            $("#navi").attr('style', "background: rgba(0, 0, 0, " + position + ");");
-            $("#logo").attr('style', "opacity: " + position + ";");
-        });
 
-        function myFunction() {
-            var x = document.getElementById("myTopnav");
-            if (x.className === "topnav") {
-                x.className += " responsive";
-            } else {
-                x.className = "topnav";
-            }
-        }
-    </script>
+
     <meta name="description" content="Web site created for QMIX" />
 </head>
 
 <body>
+    <div id="fb-root"></div>
+    <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v7.0"></script>
     <div class="home" id="home">
         <div class="black">
             <div class="titlebar" id="titlebar">
                 <img id="logo" src="../../../assets/logo.svg">
                 <div class="topnav" id="myTopnav">
                     <div id="navi">
-                        <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+                        <a href="javascript:void(0);" class="icon" onclick="mobileNav()">
                             <i class="fa fa-bars"></i>
                         </a>
-                        <a class="link active" href="#home">Home</a>
-                        <a class="link" href="#events">Events</a>
-                        <a class="link" href="#Contact">Alumini</a>
-                        <a class="link" href="" target="_blank">Contact</a>
-                        <a class="link social" href="" target="_blank"><img src="../../../assets/facebook%203.svg"></a>
-                        <a class="link social" href="https://www.instagram.com/qmix._/" target="_blank"><img src="../../../assets/facebook%202.svg"></a>
-                        <a class="link social" href="https://www.facebook.com/QUMIX/" target="_blank"><img src="../../../assets/facebook%201.svg"></a>
+                        <a id="_home" class="link active" href="#home" data-value="0">Home</a>
+                        <a id="_events" cclass="link" href="#events" data-value="1">Events</a>
+                        <a id="_alumini" cclass="link" href="#alumini" data-value="2">Alumini</a>
+                        <a id="_contact" cclass="link" href="#contact" data-value="3">Contact</a>
+                        <a class="link social" href="" target="_blank"><img src="../../../assets/twitter.svg"></a>
+                        <a class="link social" href="https://www.instagram.com/qmix._/" target="_blank"><img src="../../../assets/instagram.svg"></a>
+                        <a class="link social" href="https://www.facebook.com/QUMIX/" target="_blank"><img src="../../../assets/facebook.svg"></a>
                     </div>
                 </div>
             </div>
-            <img class="homeLogo" src="../../../assets/logo.svg">
-            <div class="intro">
-                <h1 class="title">Queen's Social Club</h1>
-                <div style="float:left; margin-top:-20px;">
+        </div>
+        <img class="homeLogo" src="../../../assets/logo.svg">
+        <div class="intro">
+            <h1 class="title">Queen's Social Club</h1>
+            <div style="float:left; margin-top:-20px;">
+                <div style="border: 3px solid #004C6D;float:left;width:100px;"></div>
+                <div style="border: 3px solid #F4BD16;float:left;width:100px;"></div>
+                <div style="border: 3px solid #B40202;float:left;width:100px;"></div>
+            </div>
+            <p class="intro">A new social club at Queen's University that aims to provide a welcoming space for all students. Follow our instagram and like our facebook page to stay tuned about all the fun events coming this fall.</p>
+            <button class="info">
+                        <a class="info" href="">Learn More</a>
+                    </button>
+        </div>
+    </div>
+    <div class="container">
+        <div class="start">
+            <!--<img id="one" class="welcomeLogo" src="../../../assets/logo.svg">-->
+            <div id="two" class="welcome" style="width: 730px;">
+                <h1 class="title resp">Welcoming Space</h1>
+                <div style="float:left; margin-top:-40px;">
                     <div style="border: 3px solid #004C6D;float:left;width:100px;"></div>
                     <div style="border: 3px solid #F4BD16;float:left;width:100px;"></div>
                     <div style="border: 3px solid #B40202;float:left;width:100px;"></div>
                 </div>
-                <p class="intro">A new social club at Queen's University that aims to provide a welcoming space for all students. Follow our instagram and like our facebook page to stay tuned about all the fun events coming this fall.</p>
-                <button class="info">
-                        <a class="info" href="">Learn More</a>
-                    </button>
-            </div>
-        </div>
-    </div>
-    <div class="container">
-        <div style="margin:auto;">
-            <img id="one" class="welcomeLogo" src="../../../assets/logo.svg">
-            <div id="two" class="welcome">
-                <h1 class="title">Welcoming Space</h1>
-                <div style="float:left; margin-top:-40px;">
-                    <div style="background: #004C6D; border: 3px solid #004C6D;float:left;width:100px;"></div>
-                    <div style="background: #F4BD16; border: 3px solid #F4BD16;float:left;width:100px;"></div>
-                    <div style="background: #B40202; border: 3px solid #B40202;float:left;width:100px;"></div>
-                </div>
                 <p class="welcome">A new social club at Queen's University … that aims to provide a welcoming space for all students. Follow our instagram and like our facebook page to stay tuned about all the fun events coming this fall.</p>
                 <button class="instagram">
-                        <a class="info" href="">Instagram<img class="button" src="../../../assets/facebook%202.svg"></a>
+                        <a class="info" href="">Instagram&nbsp;<img class="button" src="../../../assets/instagram.svg"></a>
                     </button>
+            </div>
+            <div class="fb-page" data-href="https://www.facebook.com/QUMIX/" data-tabs="timeline,events" data-width="350" data-height="500" data-small-header="false" data-adapt-container-width="false" data-hide-cover="false" data-show-facepile="true">
+                <blockquote cite="https://www.facebook.com/QUMIX/" class="fb-xfbml-parse-ignore">
+                    <a href="https://www.facebook.com/QUMIX/">QMIX</a>
+                </blockquote>
             </div>
         </div>
         <div class="space"></div>
@@ -104,140 +91,132 @@
                 <div style="background: #F4BD16; border: 3px solid #F4BD16;float:left;width:100px;"></div>
                 <div style="background: #B40202; border: 3px solid #B40202;float:left;width:100px;"></div>
             </div>
-            <p class="events">We host social events for like-minded students! Here are some of our past club events. More to come!</p>
-            <button class="facebook">
+            <p class="welcome">A new social club at Queen's University … that aims to provide a welcoming space for all students. Follow our instagram and like our facebook page to stay tuned about all the fun events coming this fall.</p>
+            <button class="instagram">
+                        <a class="info" href="">Instagram<img class="button" src="../../../assets/facebook%202.svg"></a>
+                    </button>
+        </div>
+    </div>
+    <div class="space"></div>
+    <div class="landing" id="events"></div>
+    <div class="events">
+        <h1 class="title">Past Events</h1>
+        <div style="padding: 15px; margin: 0 auto; display: inline-block; ">
+            <div style="background: #004C6D; border: 3px solid #004C6D;float:left;width:100px;"></div>
+            <div style="background: #F4BD16; border: 3px solid #F4BD16;float:left;width:100px;"></div>
+            <div style="background: #B40202; border: 3px solid #B40202;float:left;width:100px;"></div>
+        </div>
+        <p class="events">We host social events for like-minded students! Here are some of our past club events. More to come!</p>
+        <button class="facebook">
                     <a class="info" href="https://www.facebook.com/pg/QUMIX/events/?ref=page_internal">Facebook Events<img class="button" src="../../../assets/facebook%201.svg"></a>
+
+                <p class="events">We host social events for like-minded students! Here are some of our past club events. More to come!</p>
+                <button class="facebook">
+                    <a class="info" href="https://www.facebook.com/pg/QUMIX/events/?ref=page_internal">Facebook Events &nbsp;<img class="button" src="../../../assets/facebook.svg"></a>
                 </button>
 
 
-            <div class="event-grid-container">
-                <div class="event-card">
-                    <div class="event-bg-img">
-                        <img class="event-img" src="../../../assets/porchevent.jpg" />
-                    </div>
-                    <div class="event-card-content">
-                        <h4 class="card-title">Card title</h4>
-                        <p class="events">Content....</p> <button>Readmore</button>
-                    </div>
+        <div class="event-grid-container">
+            <div class="event-card">
+                <div class="event-bg-img">
+                    <img class="event-img" src="../../../assets/porchevent.jpg" />
                 </div>
-                <div class="event-card">
-                    <div class="event-bg-img">
-                        <img class="event-img" src="../../../assets/porchevent.jpg" />
-                    </div>
-                    <div class="event-card-content">
-                        <h4 class="card-title">Card title</h4>
-                        <p class="events">Content....</p> <button>Readmore</button>
-                    </div>
+                <div class="event-card-content">
+                    <h4 class="card-title">Card title</h4>
+                    <p class="events">Content....</p> <button>Readmore</button>
                 </div>
-                <div class="event-card">
-                    <div class="event-bg-img">
-                        <img class="event-img" src="../../../assets/porchevent.jpg" />
-                    </div>
-                    <div class="event-card-content">
-                        <h4 class="card-title">Card title</h4>
-                        <p class="events">Content....</p> <button>Readmore</button>
-                    </div>
+            </div>
+            <div class="event-card">
+                <div class="event-bg-img">
+                    <img class="event-img" src="../../../assets/porchevent.jpg" />
                 </div>
-                <div class="event-card">
-                    <div class="event-bg-img">
-                        <img class="event-img" src="../../../assets/porchevent.jpg" />
-                    </div>
-                    <div class="event-card-content">
-                        <h4 class="card-title">Card title</h4>
-                        <p class="events">Content....</p> <button>Readmore</button>
-                    </div>
+                <div class="event-card-content">
+                    <h4 class="card-title">Card title</h4>
+                    <p class="events">Content....</p> <button>Readmore</button>
                 </div>
-                <div class="event-card">
-                    <div class="event-bg-img">
-                        <img class="event-img" src="../../../assets/porchevent.jpg" />
-                    </div>
-                    <div class="event-card-content">
-                        <h4 class="card-title">Card title</h4>
-                        <p class="events">Content....</p> <button>Readmore</button>
-                    </div>
+            </div>
+            <div class="event-card">
+                <div class="event-bg-img">
+                    <img class="event-img" src="../../../assets/porchevent.jpg" />
                 </div>
-                <div class="event-card">
-                    <div class="event-bg-img">
-                        <img class="event-img" src="../../../assets/porchevent.jpg" />
-                    </div>
-                    <div class="event-card-content">
-                        <h4 class="card-title">Card title</h4>
-                        <p class="events">Content....</p> <button>Readmore</button>
-                    </div>
+                <div class="event-card-content">
+                    <h4 class="card-title">Card title</h4>
+                    <p class="events">Content....</p> <button>Readmore</button>
+                </div>
+            </div>
+            <div class="event-card">
+                <div class="event-bg-img">
+                    <img class="event-img" src="../../../assets/porchevent.jpg" />
+                </div>
+                <div class="event-card-content">
+                    <h4 class="card-title">Card title</h4>
+                    <p class="events">Content....</p> <button>Readmore</button>
+                </div>
+            </div>
+            <div class="event-card">
+                <div class="event-bg-img">
+                    <img class="event-img" src="../../../assets/porchevent.jpg" />
+                </div>
+                <div class="event-card-content">
+                    <h4 class="card-title">Card title</h4>
+                    <p class="events">Content....</p> <button>Readmore</button>
+                </div>
+            </div>
+            <div class="event-card">
+                <div class="event-bg-img">
+                    <img class="event-img" src="../../../assets/porchevent.jpg" />
+                </div>
+                <div class="event-card-content">
+                    <h4 class="card-title">Card title</h4>
+                    <p class="events">Content....</p> <button>Readmore</button>
                 </div>
             </div>
         </div>
-        <div class="space"></div>
-        <section class="testimonials">
-            <div class="testimonials-intro">
-                <h1 class="title">What People Say</h1>
-                <div style="padding: 40px; margin: 0 auto; display: inline-block; ">
-                    <div style="background: #004C6D; border: 3px solid #004C6D;float:left;width:100px;"></div>
-                    <div style="background: #F4BD16; border: 3px solid #F4BD16;float:left;width:100px;"></div>
-                    <div style="background: #B40202; border: 3px solid #B40202;float:left;width:100px;"></div>
-                </div>
-            </div>
-            <div class="testimonials-carousel">
-                <button><</button>
-                <blockquote class="event-card">
-                    <span style="color: #004C6D;">”</span>
-                    <div>
-                        <quote>A new social club at Queen's University that aims to provide a welcoming space for all students.</quote>
-                    </div>
-                </blockquote>
-                <blockquote class="event-card">
-                    <span style="color: #B40202;">”</span>
-                    <div>
-                        <quote>A new social club at Queen's University that aims to provide a welcoming space for all students.</quote>
-
-                    </div>
-                </blockquote>
-                <blockquote class="event-card">
-                    <span style="color: #F4BD16;">”</span>
-                    <div>
-                        <quote>A new social club at Queen's University that aims to provide a welcoming space for all students.</quote>
-                    </div>
-                </blockquote>
-                <button>></button>
-            </div>
-        </section>
-        <div class="space"></div>
     </div>
-    <script>
-        function setupScrollFunctionality() {
-            // Select all links with hashes
-            $('a[href*="#"]')
-                // Remove links that don't actually link to anything
-                .not('[href="#"]')
-                .not('[href="#0"]')
-                .click(function(event) {
-                    // On-page links
-                    if (
-                        location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') &&
-                        location.hostname == this.hostname
-                    ) {
-                        // Figure out element to scroll to
-                        var target = $(this.hash);
-                        target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
-                        // Does a scroll target exist?
-                        if (target.length) {
-                            // Only prevent default if animation is actually gonna happen
-                            event.preventDefault();
-                            $('html, body').animate({
-                                scrollTop: target.offset().top
-                            }, 1000, function() {
-                                // Callback after animation
-                                // Must change focus!
-                                var $target = $(target);
+    <div class="space"></div>
+    <section class="testimonials">
+        <div class="testimonials-intro">
+            <h1 class="title">What People Say</h1>
+            <div style="padding: 40px; margin: 0 auto; display: inline-block; ">
+                <div style="background: #004C6D; border: 3px solid #004C6D;float:left;width:100px;"></div>
+                <div style="background: #F4BD16; border: 3px solid #F4BD16;float:left;width:100px;"></div>
+                <div style="background: #B40202; border: 3px solid #B40202;float:left;width:100px;"></div>
+            </div>
+        </div>
+        <div class="testimonials-carousel">
+            <button><</button>
+            <blockquote class="event-card">
+                <span style="color: #004C6D;">”</span>
+                <div>
+                    <quote>A new social club at Queen's University that aims to provide a welcoming space for all students.</quote>
+                </div>
+            </blockquote>
+            <blockquote class="event-card">
+                <span style="color: #B40202;">”</span>
+                <div>
+                    <quote>A new social club at Queen's University that aims to provide a welcoming space for all students.</quote>
 
-                            });
-                        }
-                    }
-                });
-        }
-
-        setupScrollFunctionality();
-    </script>
+                </div>
+            </blockquote>
+            <blockquote class="event-card">
+                <span style="color: #F4BD16;">”</span>
+                <div>
+                    <quote>A new social club at Queen's University that aims to provide a welcoming space for all students.</quote>
+                </div>
+            </blockquote>
+            <button>></button>
+        </div>
+    </section>
+    <div class="space"></div>
+    </div>
+    <div class="space"></div>
+    </div>
+    <script src="../javascript/home.js"></script>
+    <script src="../javascript/scroll.js"></script>
 </body>
+
+
+</body>
+
 
 </html>

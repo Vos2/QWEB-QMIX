@@ -35,6 +35,11 @@ body {
     text-transform: uppercase;
     letter-spacing: 5px;
     margin-right: 20px;
+    -webkit-transition:   all .3s ease-in-out !important;
+      -moz-transition:  all .3s ease-in-out !important;
+       -ms-transition:  all .3s ease-in-out !important;
+        -o-transition:  all .3s ease-in-out !important;
+           transition:  all .3s ease-in-out !important;
   }
   
   .topnav a:hover {
@@ -65,7 +70,7 @@ body {
   @media screen and (max-width: 950px) {
     .topnav.responsive {
         right: 0;
-        height: 300px;
+        height: 350px;
         padding-top:75px;
         
         -webkit-animation: fadein 0.2s linear forwards;
@@ -94,6 +99,11 @@ body {
     padding-bottom: 7px !important;
 }
 
+.social:hover {
+  filter: invert(10%) sepia(6%) saturate(2652%) hue-rotate(321deg)
+    brightness(107%) contrast(92%);
+}
+
 @-webkit-keyframes fadein {
     0% { opacity: 0; }
     100% { opacity: 1; }
@@ -106,4 +116,6 @@ body {
 
   
 
-  
+input.display[type="radio"] {
+  display: none;
+}
