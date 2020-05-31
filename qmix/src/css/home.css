@@ -10,7 +10,7 @@ a {
 div.home {
     height: 100vh;
     background-color: black;
-    background: linear-gradient( 301.44deg, #000000 0%, rgba(255, 255, 255, 0) 100%), url(../../../assets/44511770_2258202144212143_8416710834306154496_o.jpg);
+    background: linear-gradient( 0deg, #ffffff77 0%, rgba(255, 255, 255, 0) 100%), url(../../../assets/44511770_2258202144212143_8416710834306154496_o.jpg);
     background-attachment: fixed;
     background-position: 100% 30%;
     background-size: 70%;
@@ -318,7 +318,7 @@ button {
     align-items: center;
 }
 
-@media screen and (max-width: 1290px) {
+@media screen and (max-width: 950px) {
     .testimonials-carousel {
         flex-direction: column;
     }
