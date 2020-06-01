@@ -44,7 +44,7 @@ function mobileNav() {
 
 // Changes the navigation bar focus to the last on clicked
 function switchFocus(state) {
-    var focus = ['_home', '_events', '_alumini', '_contact'];
+    var focus = ['_home', '_events', '_testimonials', '_contact'];
 
     for (i = 0; i < 4; i++) {
         $("#" + focus[i]).attr('style', "");
