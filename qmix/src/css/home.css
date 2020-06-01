@@ -278,6 +278,16 @@ button {
 
 /* ++++++++++++++ TESTIMONIALS +++++++++++++++++ */
 
+.testimonials {
+    padding: 0 40px;
+}
+
+.testimonials-card {
+    box-shadow: 0px 20px 20px rgba(0, 0, 0, 0.1);
+    border-radius: 14px;
+    -webkit-transition: all 0.3s ease-in-out;
+}
+
 .testimonials-intro {
     text-align: center;
 }
@@ -326,9 +336,6 @@ button {
         width: 80%;
         height: 300px;
     }
-    .testimonials-carousel button {
-        display: none;
-    }
 }
 
 .testimonials-carousel button {
@@ -345,6 +352,14 @@ button {
 
 .testimonials-carousel quote {
     font-family: Nunito;
+}
+
+.show-testimonial {
+    display: block;
+}
+
+.hide {
+    display: none;
 }
 
 div.space {
